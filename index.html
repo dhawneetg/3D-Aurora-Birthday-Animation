@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Birthday Wish 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+  <div class="form-box">
+    <h2>🎉 Create a Birthday Wish</h2>
+    <input id="nameInput" placeholder="Enter name..." maxlength="20" />
+    <button onclick="go()">Celebrate 🎂</button>
+  </div>
+
+  <script>
+    function go() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (!name) return alert("Please enter a name!");
+      window.location.href = `celebrate.html?name=${encodeURIComponent(name)}`;
+    }
+  </script>
+</body>
+</html>
